@@ -1,0 +1,686 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  height: 70px;
+  width: 100%;
+  /* background-color: red; */
+  backdrop-filter: blur(7px);
+  display: flex;
+  position: fixed;
+  z-index: 100;
+}
+
+.slide {
+  height: 100%;
+  width: 180px;
+  background-color: white;
+  /* backdrop-filter: blur(107px); */
+  position: absolute;
+  transition: 0.3s ease;
+  transform: translateX(-180px);
+}
+
+.hehe {
+  font-size: 30px;
+  text-align: right;
+  padding: 17px 0;
+  padding-right: 30px;
+  pointer-events: none;
+}
+
+ul li {
+  list-style: none;
+  font-family: Playpen Sans Arabic;
+}
+
+ul li a {
+  font-weight: 500;
+  color: black;
+  background-color: #fff;
+  /* backdrop-filter: blur(7px); */
+  text-decoration: none;
+  font-size: 24px;
+  padding: 10px 5px;
+  display: block;
+  transition: 0.3s ease;
+}
+
+input {
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.toggle {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(252, 252, 247);
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 3px;
+  top: 20px;
+  left: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.toggle .common {
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: black;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.toggle .top_line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle .middle_line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle .bottom_line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input:checked ~ .toggle .top_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+
+input:checked ~ .toggle .bottom_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+input:checked ~ .slide {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  position: absolute;
+  height: 50px;
+  left: 90px;
+  top: 10px;
+}
+
+#search {
+  position: absolute;
+  left: 1210px;
+  top: 32px;
+}
+
+#user {
+  position: absolute;
+  left: 1250px;
+  top: 32px;
+}
+
+#wishlist {
+  position: absolute;
+  left: 1290px;
+  top: 32px;
+}
+
+.coverimage {
+  object-fit: contain;
+  width: 1351px;
+  height: 600px;
+}
+
+.hehe2 {
+  font-family: Meow Script;
+  position: absolute;
+  top: 390px;
+  left: 45px;
+  font-size: 60px;
+}
+
+.para1 {
+  position: absolute;
+  top: 480px;
+  left: 50px;
+  font-size: 17px;
+}
+
+.btn1 {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 9px;
+  border: 1px;
+  background-color: black;
+  border-radius: 45px;
+  width: 147px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 520px;
+  left: 44px;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.7s;
+}
+
+button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+  /* -webkit-transition: all 0.5s; */
+  transition: all 0.7s;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  background-color: rgb(207, 222, 231);
+}
+
+.img2 {
+  height: 130px;
+  width: 170px;
+  margin: 10px;
+  transition: 0.8s ease;
+  border-radius: 10px;
+}
+
+.card1 {
+  height: 260px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card2 {
+  height: 260px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card3 {
+  height: 260px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card4 {
+  height: 260px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.card5 {
+  height: 260px;
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.head {
+  font-size: 15px;
+  padding-left: 8px;
+  font-weight: bold;
+  font-family: Playpen Sans Arabic;
+}
+
+.head2 {
+  font-size: 16px;
+  padding: 8px;
+  font-weight: 100;
+}
+
+.img2:hover {
+  transform: scale(1.08);
+}
+
+.mainsection {
+  display: flex;
+  height: 1380px;
+  background-color: rgb(207, 222, 231);
+}
+
+.img3 {
+  width: 550px;
+  height: 400px;
+  margin-left: 50px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.head3{
+  position: relative;
+  top: 100px;
+  left: 230px;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: Meow Script;
+}
+
+.para2{
+  position: relative;
+  top: 110px;
+  left: 233px;
+  font-family: Playpen Sans Arabic;
+}
+
+/* From Uiverse.io by shreyash_7108 */ 
+.hehe3 {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px;
+  background-color: black;
+  border-radius: 45px;
+  width: 130px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 1170px;
+  left: 833px;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+  /* -webkit-transition: all 0.5s; */
+  transition: all 0.5s;
+}
+
+.img4{
+  width: 550px;
+  height: 400px;
+  margin-right: 50px;
+  position: absolute;
+  top: 1400px;
+  right: 0px;
+  border-radius: 20px;
+}
+
+.head4{
+   position: absolute;
+  top: 1460px;
+  left: 140px;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: Meow Script;
+}
+
+.para3{
+   position: absolute;
+  top: 1600px;
+  left: 142px;
+  font-family: Playpen Sans Arabic;
+}
+
+.hehe4 {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px;
+  background-color: black;
+  border-radius: 45px;
+  width: 130px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 1680px;
+  left: 140px;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+  /* -webkit-transition: all 0.5s; */
+  transition: all 0.5s;
+}
+
+.img5{
+   width: 550px;
+  height: 400px;
+  position: absolute;
+  top: 1860px;
+  left: 43px;
+  border-radius: 20px;
+}
+
+.head5{
+   position: absolute;
+  top: 1900px;
+  left: 820px;
+  font-size: 50px;
+  font-weight: 100;
+  font-family: Meow Script;
+}
+
+.para4{
+    position: absolute;
+  top: 1970px;
+  left: 822px;
+  font-family: Playpen Sans Arabic;
+}
+
+.hehe5 {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px;
+  background-color: black;
+  border-radius: 45px;
+  width: 130px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 2040px;
+  left: 818px;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+  /* -webkit-transition: all 0.5s; */
+  transition: all 0.5s;
+}
+
+.img6{
+  height: 500px;
+  width: 100%;
+}
+
+.head6{
+  position: absolute;
+  top: 2530px;
+  left: 90px;
+  color: white;
+  font-family: Meow Script;
+  font-size: 50px;
+}
+
+.para5{
+  position: absolute;
+  top: 2610px;
+  left: 99px;
+  color: white;
+  font-family: Playpen Sans Arabic;
+}
+
+/* From Uiverse.io by shreyash_7108 */ 
+.hehe6 {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px;
+  background-color: black;
+  border-radius: 45px;
+  width: 130px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 2685px;
+  left: 99px;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+  /* -webkit-transition: all 0.5s; */
+  transition: all 0.5s;
+}
+
+.img7{
+  height: 550px;
+  width: 100%;
+}
+
+.head7{
+   position: absolute;
+  top: 3099px;
+  left: 90px;
+  color: white;
+  font-family: Meow Script;
+  font-size: 50px;
+}
+
+.para6{
+   position: absolute;
+  top: 3179px;
+  left: 99px;
+  color: white;
+  font-family: Playpen Sans Arabic;
+}
+
+/* From Uiverse.io by shreyash_7108 */ 
+.hehe7 {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 5px;
+  border: 1px;
+  background-color: black;
+  border-radius: 45px;
+  width: 130px;
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  top: 3255px;
+  left: 99px;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  left: -20%;
+  right: -20%;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover::after {
+  transform: skewX(-45deg) scale(1, 1);
+  /* -webkit-transition: all 0.5s; */
+  transition: all 0.5s;
+}
+
+.shipra{
+  height: 380px;
+  /* display: flex; */
+  background-color: rgb(207, 222, 231);
+}
+
+.head8{
+  position: absolute;
+  top: 3425px;
+  left: 560px;
+  font-family: Meow Script;
+  font-size: 40px;
+}
+
+.para7{
+  padding-left: 320px;
+  padding-right: 320px;
+  position: absolute;
+  top: 3500px;
+  font-family: Playpen Sans Arabic;
+}
+
+.pandey{
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  background-color: black ;
+}
+
+/* .buddy{
+  position: absolute;
+  top: 3760px;
+  left: 40px;
+} */
+
+.head9{
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.head10{
+   font-size: 30px;
+  font-weight: 600;
+}
+
+.icon1{
+  position: absolute;
+  top: 4065px;
+  left: 1120px;
+  height: 40px;
+  width: 40px;
+  background-color: white ; 
+  border-radius: 50%; 
+  /* align-items: center; */
+  padding: 11px;
+}
+
+.icon2{
+  position: absolute;
+  top: 4065px;
+  left: 1180px;
+  height: 40px;
+  width: 40px;
+  background-color: white ; 
+  border-radius: 50%; 
+  /* align-items: center; */
+  padding: 11px;
+}
+
+.icon3{
+  position: absolute;
+  top: 4065px;
+  left: 1240px;
+  height: 40px;
+  width: 40px;
+  background-color: white ; 
+  border-radius: 50%; 
+  /* align-items: center; */
+  padding: 10px;
+}
